@@ -3,25 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DesignPatterns.Entities.Races;
 using DesignPatterns.Interfaces;
 
 namespace DesignPatterns.Entities
 {
     public class Entity
     {
-        private IRaceType entityRace;
+        private IRace entityRace;
         private IClass entityClass;
         private IEntityType entityType;
         
 
-        public Entity(IRaceType entityRace, IClass entityClass, IEntityType entityType)
+        public Entity(IRace entityRace, IClass entityClass, IEntityType entityType)
         {
             this.entityRace = entityRace;
             this.entityClass = entityClass;
             this.entityType = entityType;
         }
 
-        public IRaceType GetEntityRace()
+        public IRace GetEntityRace()
         {
             return entityRace; 
         }

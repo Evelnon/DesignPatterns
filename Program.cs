@@ -1,4 +1,6 @@
-﻿using DesignPatterns.Entity.Type;
+﻿using DesignPatterns.Entities.Classes;
+using DesignPatterns.Entities.Races;
+using DesignPatterns.Entity.Type;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,7 +9,7 @@ namespace DesignPatterns
 {
     class Program
     {
-        private List<DesignPatterns.Entities.Entity > entityList = new List<DesignPatterns.Entities.Entity>();
+        
         
         static void Main(string[] args)
         {

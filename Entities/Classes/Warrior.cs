@@ -1,19 +1,21 @@
-﻿using DesignPatterns.Interfaces;
+﻿using DesignPatterns.Entities.Classes;
+using DesignPatterns.Interfaces;
 using System;
 
-public class Warrior : IClass
+public class Warrior : Class
 {
 	public Warrior()
 	{
        
     }
-    public IClass GetClass()
+    public System.Type GetClass()
     {
-        return this;
+        return typeof(Warrior);
     }
 
     public string GetHeroClassDescription()
     {
         return "Warrior";
     }
+    public void SetClassDetails() { }
 }

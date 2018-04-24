@@ -2,35 +2,23 @@
 using DesignPatterns.Interfaces;
 
 
-public class Orc : IRaceType
+public class Orc : Race
 {
 
-    IRace orc;
+    
     public Orc()
 	{
-        orc = new Race(this);
-        orc.LoadRaceStats(this);
+        SetRaceHP(20);
+        SetRaceMP(20);
+        SetRaceStrength(45);
+        SetEntityRaceDescription("Orc");
+
     }
-    public IRaceType GetRace()
+    public System.Type GetRace()
     {
-        return this;
-    }
+        return typeof(Orc);
+    }   
+   
 
-    public IRace GetRaceStats()
-    {
-        return orc;
-    }
-
-    public IRace LoadStats(Race orc)
-    {
-
-        /* database call for stats*/
-
-
-        orc.SetRaceHP(20);
-        orc.SetRaceMP(20);
-        orc.SetRaceStrength(45);
-        return orc;
-    }
 
 }

@@ -11,35 +11,37 @@ namespace DesignPatterns.Entities.Races
         private int hp;
         private int mp;
         private string raceDescription;
-        private IRaceType raceType;
+        internal IRace race;
+       
 
         public Race()
         {
-           
+
         }
-        public Race(IRaceType raceType)
-        {
-            this.raceType = raceType;
-            LoadRaceStats(raceType);
+        public Race(IRace raceType)
+        {           
+            race = raceType;
         }
-        public override IRaceType GetRace()
-        {
-            return this.raceType;
-        }
-        public override string GetEntityRaceDescription() { return raceDescription; }
-        public override int GetRaceHP() { return hp; }
-        internal void SetRaceHP(int value) { hp = value ; }
-        public override int GetRaceMP() { return mp; }
+
+        public string GetEntityRaceDescription() { return raceDescription; }
+        internal void SetEntityRaceDescription(string value) { raceDescription = value; }
+        public int GetRaceHP() { return hp; }
+        internal void SetRaceHP(int value) { hp = value; }
+        public int GetRaceMP() { return mp; }
         internal void SetRaceMP(int value) { mp = value; }
-        public override int GetRaceStrength() { return strength; }
+        public int GetRaceStrength() { return strength; }
         internal void SetRaceStrength(int value) { strength = value; }
-        public override int GetRaceConstitution() { return constitution; }
-        public override int GetRaceAgility() { return agility; }
-        public override int GetRaceInteligence() { return inteligence; }
-        internal override void LoadRaceStats(IRaceType race)
-        {
-           race.LoadStats(this);
-                  
-        }
+        public int GetRaceConstitution() { return constitution; }
+        internal void SetRaceConstitution(int value) { constitution = value; }
+        public int GetRaceAgility() { return agility; }
+        internal void SetRaceAgility(int value) { agility = value; }
+        public int GetRaceInteligence() { return inteligence; }
+        internal void SetRaceInteligence(int value) { inteligence = value; }
+        //public IRace GetEntityRaceStats() { return race; }
+        //public System.Type GetRace()
+        //{
+            
+        //    return typeof();
+        //}
     }
 }

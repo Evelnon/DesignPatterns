@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignPatterns.Entities.Races;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace DesignPatterns.Interfaces
 {
    public interface IEntityGenerator
     {
-        void GenerateEntity(IRaceType entityRace, IClass entityClass, IEntityType entityType);
-        Entities.Entity GetGeneratedEntity();
+        Entities.Entity GenerateEntity(IRace entityRace, IClass entityClass, IEntityType entityType);
+        
     }
 }

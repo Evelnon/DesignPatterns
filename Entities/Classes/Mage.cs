@@ -1,18 +1,20 @@
-﻿using DesignPatterns.Interfaces;
+﻿using DesignPatterns.Entities.Classes;
+using DesignPatterns.Interfaces;
 using System;
 
-public class Mage : IClass
+public class Mage : Class
 {
 	public Mage()
 	{  
         
     }
-    public IClass GetClass()
+    public System.Type GetClass()
     {
-        return this;
+        return typeof(Mage);
     }
     public string GetHeroClassDescription()
     {
         return "Mage";
     }
+    public void SetClassDetails() { }
 }

@@ -4,16 +4,15 @@ using System.Text;
 
 namespace DesignPatterns.Interfaces
 {
-    public abstract class IRace
+    public interface IRace
     {
-        public abstract int GetRaceHP();
-        public abstract int GetRaceMP();
-        public abstract int GetRaceStrength();
-        public abstract int GetRaceConstitution();
-        public abstract int GetRaceAgility();
-        public abstract int GetRaceInteligence();
-        public abstract IRaceType GetRace();
-        internal abstract void LoadRaceStats(IRaceType race);
-        public abstract string GetEntityRaceDescription();
+        int GetRaceHP();
+        int GetRaceMP();
+        int GetRaceStrength();
+        int GetRaceConstitution();
+        int GetRaceAgility();
+        int GetRaceInteligence();
+        //System.Type GetRace();
+        string GetEntityRaceDescription();
     }
 }
